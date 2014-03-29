@@ -1,6 +1,6 @@
 # Rubyfmt
 
-TODO: Write a gem description
+Ruby port of gofmt.
 
 ## Installation
 
