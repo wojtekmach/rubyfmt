@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Rubyfmt::VERSION
   spec.authors       = ["Wojtek Mach"]
   spec.email         = ["wojtek@wojtekmach.pl"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = "Ruby port of gofmt"
+  spec.description   = ""
   spec.homepage      = ""
   spec.license       = "MIT"
 
