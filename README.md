@@ -2,6 +2,10 @@
 
 Ruby port of gofmt.
 
+## Usage
+
+TODO: Write usage instructions here
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -16,9 +20,9 @@ Or install it yourself as:
 
     $ gem install rubyfmt
 
-## Usage
+## Credits
 
-TODO: Write usage instructions here
+- seattle.rb - for ruby_parser & ruby2ruby which do _all_ of the heavy-lifting.
 
 ## Contributing
 
