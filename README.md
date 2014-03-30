@@ -4,7 +4,17 @@ Ruby port of gofmt.
 
 ## Usage
 
-TODO: Write usage instructions here
+```bash
+$ echo 'def hello(who="world");puts "Hello #{who}";end' | ./bin/rubyfmt
+```
+
+Outputs:
+
+```ruby
+def hello(who = "world")
+  puts("Hello #{who}")
+end
+```
 
 ## Installation
 
