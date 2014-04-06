@@ -4,10 +4,14 @@ require 'ruby_parser'
 
 module Rubyfmt
   def self.format(string)
-    Processor.new.process(RubyParser.new.parse(string))
+    Processor.new.process(RubyParser.new.parse(string)).strip
   end
 
   class Processor < Ruby2Ruby
+    def process_class(exp)
+      super + "\n"
+    end
+
     def process_if(exp)
       super.sub(/\ then$/, '')
     end

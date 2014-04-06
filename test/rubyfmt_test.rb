@@ -6,6 +6,19 @@ describe "Rubyfmt" do
     assert_fixture 'person'
   end
 
+  it "adds blank line between class definitions" do
+    assert_code %Q{
+      class Foo
+      end
+
+      class Bar
+      end
+    }, %Q{
+      class Foo; end
+      class Bar; end
+    }
+  end
+
   private
 
   def code(str)
@@ -17,8 +30,8 @@ describe "Rubyfmt" do
   end
 
   def assert_fixture(name)
-    expected = File.read("./test/fixtures/#{name}.expected.rb")
-    actual   = File.read("./test/fixtures/#{name}.actual.rb")
+    expected = File.read("./test/fixtures/#{name}.expected.rb").strip
+    actual   = File.read("./test/fixtures/#{name}.actual.rb").strip
     assert_code expected, actual
   end
 end
