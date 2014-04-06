@@ -19,6 +19,25 @@ describe "Rubyfmt" do
     }
   end
 
+  it "adds blank line between method definitions" do
+    assert_code %Q{
+      class Foo
+        def foo
+          42
+        end
+        
+        def bar
+          42
+        end
+      end
+    }, %Q{
+      class Foo
+        def foo; 42 end
+        def bar; 42 end
+      end
+    }
+  end
+
   private
 
   def code(str)
