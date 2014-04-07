@@ -2,6 +2,10 @@
 
 Ruby port of gofmt.
 
+[![Build Status](http://img.shields.io/travis/wojtekmach/rubyfmt.svg)][travis]
+
+[travis]: https://travis-ci.org/wojtekmach/rubyfmt
+
 ## Usage
 
 ```bash
