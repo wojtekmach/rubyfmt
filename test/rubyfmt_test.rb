@@ -38,6 +38,10 @@ describe "Rubyfmt" do
     }
   end
 
+  it "does not add parens for puts" do
+    assert_code 'puts 42', 'puts 42'
+  end
+
   private
 
   def code(str)

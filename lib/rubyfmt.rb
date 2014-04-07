@@ -20,6 +20,17 @@ module Rubyfmt
       super.sub(/\ do$/, '')
     end
 
+    def process_call(exp)
+      methods_without_parens = [:puts]
+      method = exp[1]
+      
+      if methods_without_parens.include?(method)
+        super.sub(/^(#{method})\((.*)\)$/, '\1 \2')
+      else
+        super
+      end
+    end
+
     def indent(s)
       super.split(/\n/).map {|line| line.strip.size == 0 ? '' : line }.join("\n")
     end

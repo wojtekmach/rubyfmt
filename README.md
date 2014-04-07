@@ -12,7 +12,7 @@ Outputs:
 
 ```ruby
 def hello(who = "world")
-  puts("Hello #{who}")
+  puts "Hello #{who}"
 end
 ```
 
