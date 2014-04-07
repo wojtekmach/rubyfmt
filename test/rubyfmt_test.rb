@@ -2,7 +2,7 @@ require 'minitest/autorun'
 require 'rubyfmt'
 
 describe "Rubyfmt" do
-  it do
+  it "works" do
     assert_fixture 'person'
   end
 
