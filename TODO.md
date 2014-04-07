@@ -1,0 +1,4 @@
+- output 1.9 hashes
+- handle `__FILE__ `
+- don't wrap `a || b` in parens
+- prefer `a || b` over `a or b`
