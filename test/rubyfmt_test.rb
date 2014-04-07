@@ -42,6 +42,26 @@ describe "Rubyfmt" do
     assert_code 'puts 42', 'puts 42'
   end
 
+  it "does not add parens for ||" do
+    skip
+    assert_code 'a || b', 'a || b'
+  end
+
+  it 'handles __FILE__' do
+    skip
+    assert_code '__FILE__', '__FILE__'
+  end
+
+  it "uses 1.9 hashes" do
+    skip
+    assert_code '{a: 42}', '{a: 42}'
+  end
+
+  it "does not add parens for <<" do
+    skip
+    assert_code 'a << 42', 'a << 42'
+  end
+
   private
 
   def code(str)
