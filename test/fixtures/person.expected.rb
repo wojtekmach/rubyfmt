@@ -3,7 +3,7 @@ class Person
     @name = name
     @title = title
   end
-  
+
   def to_s
     return "#{title} #{name}" if title
     name

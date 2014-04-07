@@ -25,7 +25,7 @@ describe "Rubyfmt" do
         def foo
           42
         end
-        
+
         def bar
           42
         end
