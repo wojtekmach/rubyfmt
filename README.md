@@ -3,8 +3,10 @@
 Ruby port of gofmt.
 
 [![Build Status](http://img.shields.io/travis/wojtekmach/rubyfmt.svg)][travis]
+[![Code Climate](http://img.shields.io/codeclimate/github/wojtekmach/rubyfmt.svg)][codeclimate]
 
 [travis]: https://travis-ci.org/wojtekmach/rubyfmt
+[codeclimate]: https://codeclimate.com/github/wojtekmach/rubyfmt
 
 ## Usage
 
