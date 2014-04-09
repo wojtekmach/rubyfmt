@@ -67,6 +67,34 @@ describe "Rubyfmt" do
     assert_code '1 + 2', '1 + 2'
   end
 
+  it "formats private block" do
+    assert_code %Q{
+      class Foo
+        def foo
+          42
+        end
+
+        private
+
+        def bar
+          42
+        end
+      end
+    }, %Q{
+      class Foo
+        def foo
+          42
+        end
+
+        private
+
+        def bar
+          42
+        end
+      end
+    }
+  end
+
   private
 
   def code(str)
