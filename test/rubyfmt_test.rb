@@ -62,6 +62,11 @@ describe "Rubyfmt" do
     assert_code 'a << 42', 'a << 42'
   end
 
+  it "does not add parens for +"do
+    skip
+    assert_code '1 + 2', '1 + 2'
+  end
+
   private
 
   def code(str)
