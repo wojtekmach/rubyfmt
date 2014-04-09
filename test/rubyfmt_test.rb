@@ -39,48 +39,36 @@ describe "Rubyfmt" do
   end
 
   it "does not add parens for puts" do
-    assert_code 'puts 42', 'puts 42'
+    assert_code 'puts 42'
   end
 
   it "does not add parens for ||" do
     skip
-    assert_code 'a || b', 'a || b'
+    assert_code 'a || b'
   end
 
   it 'handles __FILE__' do
     skip
-    assert_code '__FILE__', '__FILE__'
+    assert_code '__FILE__'
   end
 
   it "uses 1.9 hashes" do
     skip
-    assert_code '{a: 42}', '{a: 42}'
+    assert_code '{a: 42}'
   end
 
   it "does not add parens for <<" do
     skip
-    assert_code 'a << 42', 'a << 42'
+    assert_code 'a << 42'
   end
 
   it "does not add parens for +"do
     skip
-    assert_code '1 + 2', '1 + 2'
+    assert_code '1 + 2'
   end
 
   it "formats private block" do
     assert_code %Q{
-      class Foo
-        def foo
-          42
-        end
-
-        private
-
-        def bar
-          42
-        end
-      end
-    }, %Q{
       class Foo
         def foo
           42
@@ -101,7 +89,7 @@ describe "Rubyfmt" do
     str.gsub(/^\ {6}/, '').strip
   end
 
-  def assert_code(expected, actual)
+  def assert_code(expected, actual = expected)
     assert_equal code(expected), Rubyfmt.format(code(actual))
   end
 
