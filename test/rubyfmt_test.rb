@@ -42,6 +42,14 @@ describe "Rubyfmt" do
     assert_code 'puts 42'
   end
 
+  it "does not add parens for attr_reader" do
+    assert_code %Q{
+      class Foo
+        attr_reader :foo, :bar
+      end
+    }
+  end
+
   it "does not add parens for ||" do
     skip
     assert_code 'a || b'

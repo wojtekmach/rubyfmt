@@ -21,7 +21,13 @@ module Rubyfmt
     end
 
     def process_call(exp)
-      methods_without_parens = [:require, :load, :puts]
+      methods_without_parens = [
+        :require, :load,
+        :puts,
+        :attr_reader, :attr_writer, :attr_accessor,
+        :public, :private, :protected,
+      ]
+
       method = exp[1]
       
       if methods_without_parens.include?(method)
